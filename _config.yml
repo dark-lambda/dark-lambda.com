@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: dark-lambda.com
 subtitle:
 description:
 keywords:
-author: John Doe
-language:
-timezone:
+author: dark-lambda
+language: ja
+timezone: Japan
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://dark-lambda.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

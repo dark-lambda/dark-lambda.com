@@ -14,6 +14,8 @@ categories: ["CTF", "misc"]
 
 といううことなので [Rules](https://ctf.euristica.in/rules) を確認しに行くと [freenode](https://webchat.freenode.net/?channels=#BBCTF) のリンクがあったので、適当にログインしてフラグゲット。
 
+## フラグ
+
 `flag{Welc0me_t0_Byt3B4ndits_CTF_Y0u_did_y0ur_p4rt}`
 
 ## 参考リソース

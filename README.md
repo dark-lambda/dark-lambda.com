@@ -6,4 +6,11 @@
 
 ```shell
 $ git@github.com:dark-lambda/blog.git
+$ yarn hexo server
 ```
+
+Access to [http://localhost:4000/](http://localhost:4000/).
+
+## Hexo
+
+- [Configuration](https://hexo.io/docs/configuration.html)

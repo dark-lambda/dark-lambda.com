@@ -1,7 +1,7 @@
 ---
 title: Greetings (ByteBandits CTF 2019)
-tags: ["ByteBandits CTF 2019", "misc"]
-categories: ["CTF"]
+tags: ["ByteBandits CTF 2019"]
+categories: ["CTF", "misc"]
 ---
 
 <img src="greetings.png">

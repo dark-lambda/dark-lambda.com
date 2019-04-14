@@ -1,7 +1,7 @@
 ---
 title: Greetings (ByteBandits CTF 2019)
 tags: ["ByteBandits CTF 2019"]
-categories: ["CTF", "misc"]
+categories: [CTF, misc]
 ---
 
 {% asset_img greetings.png %}

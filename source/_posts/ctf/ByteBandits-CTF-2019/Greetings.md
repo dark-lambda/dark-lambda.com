@@ -4,7 +4,7 @@ tags: ["ByteBandits CTF 2019"]
 categories: ["CTF", "misc"]
 ---
 
-<img src="greetings.png">
+{% asset_img greetings.png %}
 
 ## 解説
 

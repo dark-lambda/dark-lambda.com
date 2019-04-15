@@ -33,6 +33,7 @@
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.32.1/dist/algoliasearchLite.js" integrity="sha256-pMaJf0I78weeXGkRMBDO6jSulxC/q3sb0aPdtV2N8n0=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.2.0" integrity="sha256-/8usMtTwZ01jujD7KAZctG0UMk2S2NDNirGFVBbBZCM=" crossorigin="anonymous"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.includes"></script>
+<script src="https://unpkg.com/striptags@3.1.1/src/striptags.js"></script>
 <script>
   const searchClient = algoliasearch('<%= theme.algolia.applicationID %>', '<%= theme.algolia.apiKey %>');
 
@@ -66,14 +67,54 @@
   search.addWidget(
     instantsearch.widgets.hits({
       container: '#hits',
+      escapeHTML: false,
+      transformItems(items) {
+        return items.map(item => {
+          if (item._highlightResult.content.matchedWords.length > 0) {
+            let plain = striptags(item._highlightResult.content.value, "<em>")
+            let searchWord = item._highlightResult.content.matchedWords[0];
+            item._highlightResult.content.value = '';
+            let m = searchWord.length;
+            let cnt = 0;
+
+            while (plain.indexOf(searchWord) !== -1 && cnt < 5) {
+              let n = plain.indexOf(searchWord);
+              let clipText = plain.slice(n-25, n+m+25)
+
+              if (clipText.length !== 0) {
+                if (cnt !== 0) {
+                  item._highlightResult.content.value += '<br>'
+                }
+                item._highlightResult.content.value += `${clipText}<br>`
+                cnt = cnt + 1;
+              }
+              plain = plain.slice(n+m)
+            }
+          } else {
+            item._highlightResult.content.value = '';
+          }
+          return item
+        })
+      },
       templates: {
         empty: '<p>「{{ query }}」の結果は見つかりませんでした。</p>',
         item: `
         <a href={{ permalink }}>{{ title }}</a>
+        <p class='ais-Hits-item-content'>
+        {{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}
+        </p>
         `,
       },
     })
   );
 
   search.start();
+
+  if ($(".ais-SearchBox-input").val.length === 0) {
+    $("#hits").css("position", "fixed");
+    $("#hits").css("z-index", "-2");
+  } else {
+    $("#hits").css("position", "relative");
+    $("#hits").css("z-index", "0");
+  }
 </script>

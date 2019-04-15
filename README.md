@@ -14,7 +14,7 @@ Access to [http://localhost:4000/](http://localhost:4000/).
 Generate algolia indices.
 
 ```shell
-$ yarn hexo algolia
+$ yarn hexo algolia --layouts page, post
 ```
 
 ## Hexo

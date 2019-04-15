@@ -11,6 +11,12 @@ $ yarn hexo server
 
 Access to [http://localhost:4000/](http://localhost:4000/).
 
+Generate algolia indices.
+
+```shell
+$ yarn hexo algolia
+```
+
 ## Hexo
 
 - [Configuration](https://hexo.io/docs/configuration.html)
@@ -19,3 +25,4 @@ Access to [http://localhost:4000/](http://localhost:4000/).
 
 - [hexojs/hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
 - [hexojs/hexo-generator-sitemap](https://github.com/hexojs/hexo-generator-sitemap)
+- [oncletom/hexo-algolia](https://github.com/oncletom/hexo-algolia)

@@ -92,4 +92,9 @@ feed:
   order_by: -date
 
 sitemap:
-    path: sitemap.xml
+  path: sitemap.xml
+
+algolia:
+  applicationID: 721SZTS1FL
+  apiKey: 1702779d1ab6d39d7e1f5794364ea7f9
+  indexName: prod_dark-lambda.com

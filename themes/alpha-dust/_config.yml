@@ -43,3 +43,7 @@ footer_about: "dark-lambda は CTF コンテストへ参加する組織です。
 # Footer Copyright Line
 footer_copyright: "@dark-lambda. All right reserved | Design & Hexo <a href=\"http://www.codeblocq.com/\">Jonathan Klughertz</a>"
 
+algolia:
+  applicationID: 721SZTS1FL
+  apiKey: 1702779d1ab6d39d7e1f5794364ea7f9
+  indexName: prod_dark-lambda.com

@@ -27,6 +27,8 @@
           border-bottom none
 
 nav
+  display flex
+  align-items baseline
   position fixed
   right 2em
   top 1.5em
@@ -45,3 +47,26 @@ nav
         content "\f00d"
   a:hover
     opacity 1
+  .ais-InstantSearch
+    margin-right 2rem
+  .right-panel
+    #hits
+      background-color white
+      width auto
+      margin-top 10px
+      .ais-Hits
+        .ais-Hits-list
+          border-top 1px solid #666
+        .ais-Hits-item
+          border-bottom 1px solid #666
+          padding 5px
+          a
+            color white
+            font-family "Orbitron", sans-serif
+            font-size 1rem
+            &:before
+              content ''
+      .ais-Hits.ais-Hits--empty p
+          color white
+          font-family "Orbitron", sans-serif
+          font-size 1rem

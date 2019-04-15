@@ -28,3 +28,52 @@
     }());
 </script>
 <% } %>
+
+<!-- Algolia  -->
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.32.1/dist/algoliasearchLite.js" integrity="sha256-pMaJf0I78weeXGkRMBDO6jSulxC/q3sb0aPdtV2N8n0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.2.0" integrity="sha256-/8usMtTwZ01jujD7KAZctG0UMk2S2NDNirGFVBbBZCM=" crossorigin="anonymous"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.includes"></script>
+<script>
+  const searchClient = algoliasearch('<%= theme.algolia.applicationID %>', '<%= theme.algolia.apiKey %>');
+
+  const search = instantsearch({
+    indexName: '<%= theme.algolia.indexName %>',
+    searchClient,
+    searchFunction: function(helper) {
+      // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/js/#handling-empty-queries
+      const container = document.querySelector('#hits');
+      if (helper.state.query === '') {
+        container.style.display = 'none';
+      } else {
+        container.style.display = '';
+      }
+      helper.search();
+    }
+  });
+
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: '#searchbox',
+      placeholder: `Search words`,
+      showReset: false,
+      showSubmit: false,
+      cssClasses: {
+        input: 'form-control'
+      }
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '#hits',
+      templates: {
+        empty: '<p>「{{ query }}」の結果は見つかりませんでした。</p>',
+        item: `
+        <a href={{ permalink }}>{{ title }}</a>
+        `,
+      },
+    })
+  );
+
+  search.start();
+</script>

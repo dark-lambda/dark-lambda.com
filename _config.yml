@@ -80,7 +80,7 @@ theme: alpha-dust
 deploy:
   type:
 
-# RSS feed
+# Custom Plugins
 feed:
   type: atom
   path: atom.xml
@@ -90,3 +90,6 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+sitemap:
+    path: sitemap.xml

@@ -19,7 +19,8 @@ archive_date_format: YYYY-MM-DD
 # Comments.
 comments:
   # Disqus comments
-  disqus_shortname:
+  disqus_shortname: dark-lambda
+  disqus_lang: ja
 
 # Google Analytics Tracking ID
 google_analytics: UA-37773191-3

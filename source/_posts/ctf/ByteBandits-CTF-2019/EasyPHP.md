@@ -1,6 +1,6 @@
 ---
 title: EasyPHP (ByteBandits CTF 2019)
-date: 2019-04-14
+date: 2019-04-13
 tags: ["ByteBandits CTF 2019", PHP]
 categories: [CTF, web]
 ---

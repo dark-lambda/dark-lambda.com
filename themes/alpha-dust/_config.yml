@@ -35,7 +35,7 @@ googleplus_url:
 behance_url: 
 fivehundredpx_url: 
 email_url: 
-rss_url: \#
+rss_url: /atom.xml
 
 # Footer About Text
 footer_about: "dark-lambda は CTF コンテストへ参加する組織です。"

@@ -163,7 +163,7 @@ $$
 {% raw %}
 $$
 \begin{aligned}
-aa^{-1} \equiv 1 (\bmod m)
+aa^{-1} \equiv 1 (\mod m)
 \end{aligned}
 $$
 {% endraw %}

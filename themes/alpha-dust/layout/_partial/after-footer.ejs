@@ -67,42 +67,10 @@
   search.addWidget(
     instantsearch.widgets.hits({
       container: '#hits',
-      escapeHTML: false,
-      transformItems(items) {
-        return items.map(item => {
-          if (item._highlightResult.content.matchedWords.length > 0) {
-            let plain = striptags(item._highlightResult.content.value, "<em>")
-            let searchWord = item._highlightResult.content.matchedWords[0];
-            item._highlightResult.content.value = '';
-            let m = searchWord.length;
-            let cnt = 0;
-
-            while (plain.indexOf(searchWord) !== -1 && cnt < 5) {
-              let n = plain.indexOf(searchWord);
-              let clipText = plain.slice(n-25, n+m+25)
-
-              if (clipText.length !== 0) {
-                if (cnt !== 0) {
-                  item._highlightResult.content.value += '<br>'
-                }
-                item._highlightResult.content.value += `${clipText}<br>`
-                cnt = cnt + 1;
-              }
-              plain = plain.slice(n+m)
-            }
-          } else {
-            item._highlightResult.content.value = '';
-          }
-          return item
-        })
-      },
       templates: {
         empty: '<p>「{{ query }}」の結果は見つかりませんでした。</p>',
         item: `
         <a href={{ permalink }}>{{ title }}</a>
-        <p class='ais-Hits-item-content'>
-        {{#helpers.highlight}}{ "attribute": "content" }{{/helpers.highlight}}
-        </p>
         `,
       },
     })

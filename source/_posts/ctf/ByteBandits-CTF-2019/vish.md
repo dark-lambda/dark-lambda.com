@@ -1,8 +1,10 @@
 ---
 title: vish (ByteBandits CTF 2019)
 date: 2019-04-14
-tags: ["ByteBandits CTF 2019"]
-categories: [CTF, misc]
+tags:
+- "CTF"
+- "ByteBandits CTF 2019"
+categories: misc
 ---
 
 {% asset_img problem.png %}

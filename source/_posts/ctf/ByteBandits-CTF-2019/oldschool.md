@@ -381,6 +381,6 @@ crack a crypted = forM_ [0..25] $ \i -> do
 - [Modulo operation - Wikipedia](https://en.wikipedia.org/wiki/Modulo_operation)
 - [Modular multiplicative inverse - Wikipedia](https://en.wikipedia.org/wiki/Modular_multiplicative_inverse)
 - [Extended Euclidean algorithm - Wikipedia](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)
-- [Bézout's identity](https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity)
+- [Bézout's identity - Wikipedia](https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity)
 - [writeup by warlock_rootx](https://ctftime.org/writeup/14628)
 - [writeup by Team_M](https://ctftime.org/writeup/14615)

@@ -25,5 +25,4 @@ $ yarn hexo algolia --layouts page, post
 
 - [hexojs/hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
 - [hexojs/hexo-generator-sitemap](https://github.com/hexojs/hexo-generator-sitemap)
-- [hexojs/hexo-math](https://github.com/hexojs/hexo-math)
 - [oncletom/hexo-algolia](https://github.com/oncletom/hexo-algolia)

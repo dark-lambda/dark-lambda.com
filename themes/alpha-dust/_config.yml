@@ -26,7 +26,7 @@ comments:
 google_analytics: UA-37773191-3
 
 # Social Accounts
-twitter_url: 
+twitter_url: https://twitter.com/LambdaDark
 facebook_url: 
 instagram_url: 
 dribble_url: 
@@ -34,7 +34,8 @@ github_url: https://github.com/dark-lambda/dark-lambda.com
 googleplus_url: 
 behance_url: 
 fivehundredpx_url: 
-email_url: 
+email_url: dev@dark-lambda.com
+gitbook_url: https://book.dark-lambda.com/
 rss_url: /atom.xml
 
 # Footer About Text

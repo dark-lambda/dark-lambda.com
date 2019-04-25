@@ -24,5 +24,5 @@ $ yarn hexo algolia --layouts page, post
 ### installed plugins
 
 - [hexojs/hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
-- [hexojs/hexo-generator-sitemap](https://github.com/hexojs/hexo-generator-sitemap)
+- [hexojs/hexo-generator-sitemap](https://github.com/hexojs/hexo-generator-sitemap) 
 - [oncletom/hexo-algolia](https://github.com/oncletom/hexo-algolia)

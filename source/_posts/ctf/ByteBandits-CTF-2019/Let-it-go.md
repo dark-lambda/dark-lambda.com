@@ -78,7 +78,7 @@ categories: misc
    82 348.068367  52.66.5.185 → 125.168.43.105 NTP 92 NTP Version 4, server
 ```
 
-`ip.dst` のフィールドのみを取り出すためには `-T fields -e ip.dst` を `-r` オプションより前に指定します。
+`ip.dst` のフィールドのみを取り出すためには `-T fields -e ip.dst` を指定します。
 
 ```shell
 λ tshark -T fields -e ip.dst -r challenge.pcap 'ip.dst_host matches ".168.43.105" && !ip.dst_host == 192.168.43.105'

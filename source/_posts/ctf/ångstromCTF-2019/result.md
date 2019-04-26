@@ -31,7 +31,7 @@ BINARY | 1 / 8
 
 また来年も出てみようと思います。
 
-## writeup まとめ
+## 日本語で読める writeup まとめ
 
 - [ångstromCTF 2019 -「Server (180pts)」之解き方 - ハッカーズ魔導書](https://madousho.hatenadiary.jp/entry/2019/04/26/073448)
 - [angstromctf 2019 WriteUp - 196Log](https://thinline196.hatenablog.com/entry/2019/04/26/010254)

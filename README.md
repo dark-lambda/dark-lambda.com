@@ -5,7 +5,7 @@
 - [klugjo/hexo-theme-alpha-dust](https://github.com/klugjo/hexo-theme-alpha-dust)
 
 ```shell
-$ git@github.com:dark-lambda/blog.git
+$ git clone git@github.com:dark-lambda/blog.git
 $ yarn hexo server
 ```
 
